@@ -64,8 +64,9 @@ For this particular challenge, Playwright Test provides a lightweight solution w
 6. Verify that the selected product is present.
 7. Proceed to checkout.
 8. Enter customer information.
-9. Complete the purchase.
-10. Verify the order confirmation message.
+9. Verify the checkout overview page and confirm that the selected product appears in the order summary.
+10. Complete the purchase.
+11. Verify the order confirmation message.
 
 **Reason for selection:** The checkout process represents a critical business workflow that involves multiple application components. Automating this journey provides broader functional coverage than testing an isolated UI element.
 
@@ -127,7 +128,7 @@ Before running the project, make sure the following tools are installed:
 Clone the repository:
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/juanchacongranados/halo-qa-automation-challenge.git
 ```
 
 Navigate to the project directory:
@@ -239,7 +240,7 @@ During local development, the following executions were completed successfully:
 | TypeScript validation             | Passed                    |
 | Browser coverage                  | Chromium, Firefox, WebKit |
 
-These results reflect local execution. CI execution is verified separately through GitHub Actions.
+All automated tests and TypeScript checks also passed successfully in GitHub Actions. Two consecutive CI workflow runs completed successfully, including the latest execution after adding checkout overview validation.
 
 ## 11. Potential Improvements
 
