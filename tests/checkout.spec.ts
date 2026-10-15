@@ -39,6 +39,13 @@ test("should complete a purchase successfully", async ({ page }) => {
     checkoutData.postalCode,
   );
 
+  // Validate checkout overview
+  await expect(page).toHaveURL(/checkout-step-two\.html/);
+
+  await expect(checkoutPage.overviewProductName).toHaveText(
+    "Sauce Labs Backpack",
+  );
+
   // Complete purchase
   await checkoutPage.finishPurchase();
 
